@@ -25,7 +25,7 @@ defaults["sponserpics"] = [
     "https://raw.githubusercontent.com/russella02/2168SponsorLogos/master/US_Air_Force_Logo_Solid_Colour.svg.png",
     "https://raw.githubusercontent.com/russella02/2168SponsorLogos/master/Walmart_logo.svg.png",
     "https://raw.githubusercontent.com/russella02/2168SponsorLogos/master/constellation-logo.png",
-    "https://raw.githubusercontent.com/russella02/2168SponsorLogos/master/pfizer.png"
+    "https://raw.githubusercontent.com/russella02/2168SponsorLogos/master/pfizer.png",
     
 ];
 
