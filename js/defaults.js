@@ -4,14 +4,32 @@ defaults["eventkey"] = "2019miwmi";
 defaults["streamurl"] = "[auto]";
 defaults["showsponsers"] = 1;
 defaults["sponserpics"] = [
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/1.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/2.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/3.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/4.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/5.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/6.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/7.png",
-    "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/8.png"
+    "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/APS.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/COFCU.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/constellation-logo.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/DavisStandard.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/DoDSTEM.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/ETM.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Google.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/GPS.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Groton",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Utilities.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Hampden",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Engineering.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Hillery.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/JSteele.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/L+M.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/MathWorks.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/MysticWoman_sClub.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/PCC",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/STRUCTURALS.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/pfizer.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/R-D.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Solidworks.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/UBS_Logo.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/US_Air_Force_Logo_Solid_Colour.svg.png",
+"https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Walmart_logo.svg.png"
+
 ];
 
 function loadDefaults(loadsetup) {

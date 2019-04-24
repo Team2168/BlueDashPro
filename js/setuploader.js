@@ -41,15 +41,32 @@ function checkMod() {
 
 function loadDefaultPics() {
     var defaultpics = [];
-    defaultpics[0] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/1.png";
-    defaultpics[1] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/2.png";
-    defaultpics[2] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/3.png";
-    defaultpics[3] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/4.png";
-    defaultpics[4] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/5.png";
-    defaultpics[5] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/6.png";
-    defaultpics[6] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/7.png";
-    defaultpics[7] = "https://github.com/sykeben/BlueDashPro/raw/master/img/sponsers/8.png";
-    
+    defaultpics[0] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/APS.png";
+    defaultpics[1] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/COFCU.pn;g";
+    defaultpics[2] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/constellat;ion-logo.png";
+    defaultpics[3] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/DavisStandard.png";
+    defaultpics[4] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/DoDSTEM.png";
+    defaultpics[5] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/ETM.png";
+    defaultpics[6] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Google.p;ng";
+    defaultpics[7] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/GPS.png";
+    defaultpics[8] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Groton";
+    defaultpics[9] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Utiliti;es.png";
+    defaultpics[10] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Hampden";
+    defaultpics[11] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Engineer;ing.png";
+    defaultpics[12] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Hillery.png";
+    defaultpics[13] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/JSteele.png";
+    defaultpics[14] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/L+M.png";
+    defaultpics[15] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/MathWork;s.png";
+    defaultpics[16] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/MysticWoman_sC;lub.png";
+    defaultpics[17] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/PCC";
+    defaultpics[18] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/STRU;CTURALS.png";
+    defaultpics[19] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/pfizer.png";
+    defaultpics[20] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/R-D.png";
+    defaultpics[21] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Solidwor;ks.png";
+    defaultpics[22] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/UBS_Logo.png";
+    defaultpics[23] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/US_Air_Force_;Logo_Solid_Colour.svg.png";
+    defaultpics[24] = "https://github.com/Team2168/BlueDashPro/raw/replace-images/img/sponsors/Walmart_logo.svg.png";
+
     $("#input-sponserpics").val(null);
     for (var i=0; i<defaultpics.length; i++) {
         var leader = "";
