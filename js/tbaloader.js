@@ -5,15 +5,15 @@ function doOnLoad() {
         var delayedReload = function() { window.location.reload(); clearInterval(delayedReload); };
         setInterval(delayedReload, 3000);
     }
-    var streamUrl = getSetting("streamurl");
+    /*var streamUrl = getSetting("streamurl");
     if (streamUrl != null && streamUrl != "[none]") {
         document.getElementById("streamFrame").src = streamUrl;
     }
     if (getSetting("streambroken")) {
         document.getElementById("streamFrame").src = "streamerror/broken.html";
-    }
-    showHideSponsers();
-    fixStream();
+    }*/
+    //showHideSponsers();
+    //fixStream();
     doInterval();
     loadRankTotal();
     loadSponserPics();
@@ -81,8 +81,13 @@ function loadTopRanks() {
         success: function(data) {
             var rankData = data.rankings;
             if (data != null) {
-                for (var i=0; i<8; i++) {
+                for (var i=0; i<68; i++) {
                     document.getElementById("rankTeam"+(i+1).toString()).innerHTML = rankData[i].team_key.toString().replace("frc", "");
+                    var tMP = rankData[i].matches_played;
+                    document.getElementById("played"+(i+1).toString()).innerHTML = tMP.toString();
+                    var tRP = rankData[i].extra_stats[0];
+                    document.getElementById("totalRP"+(i+1).toString()).innerHTML = tRP;
+                    document.getElementById("meanRP"+(i+1).toString()).innerHTML = (tRP / tMP).toFixed(2).toString();
                     if (rankData[i].team_key.toString().replace("frc", "") == getSetting("teamkey").toString().replace("frc", "")) {
                         document.getElementById("rowTeam"+(i+1).toString()).style = "background-color: lightgreen;";
                     } else {
@@ -99,11 +104,13 @@ function loadLastMatch(data) {
     if (lastMatchKey != null) {
         $.ajax({
             type: "GET",
-            url: tbaUrl("/match/"+lastMatchKey+"/simple"),
+            url: tbaUrl("/match/"+lastMatchKey),
             dataType: "json",
             success: function(data) {
                 document.getElementById("lastRedScore").innerHTML = data.alliances.red.score.toString();
                 document.getElementById("lastBlueScore").innerHTML = data.alliances.blue.score.toString();
+                document.getElementById("lastRedRP").innerHTML = data.score_breakdown.red.rp.toString();
+                document.getElementById("lastBlueRP").innerHTML = data.score_breakdown.blue.rp.toString();
                 
                 var tempTeamNumber = 0; var tempStart = ""; var tempEnd = "";
                 for (var i=0; i<3; i++) {
