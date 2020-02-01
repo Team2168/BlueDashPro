@@ -74,12 +74,28 @@ function loadTeamRank(data) {
 }
 
 function loadTopRanks() {
+    
     $.ajax({
         type: "GET",
         url: tbaUrl("/event/"+getSetting("eventkey")+"/rankings"),
         dataType: "json",
         success: function(data) {
+            var table = document.getElementById("table");
             var rankData = data.rankings;
+            table.tBodies.innerHTML = "";
+            if (data != null) {
+                for (var i = 0; i < rankData.length; i++) {
+                    var row = table.insertRow(-1);
+                    row.insertCell(-1).innerHTML = (i+1).toString();
+                    row.insertCell(-1).innerHTML = rankData[i].team_key.toString().replace("frc", "");
+                    var tMP = rankData[i].matches_played;
+                    var tRP = rankData[i].extra_stats[0];
+                    row.insertCell(-1).innerHTML = rankData[i].matches_played.toString();
+                    row.insertCell(-1).innerHTML = rankData[i].extra_stats[0];
+                    row.insertCell(-1).innerHTML = (tRP / tMP).toFixed(2).toString();
+                }
+            }
+            /*
             if (data != null) {
                 for (var i=0; i<68; i++) {
                     document.getElementById("rankTeam"+(i+1).toString()).innerHTML = rankData[i].team_key.toString().replace("frc", "");
@@ -95,6 +111,7 @@ function loadTopRanks() {
                     }
                 }
             }
+            */
         }
     });
 }
