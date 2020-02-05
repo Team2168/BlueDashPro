@@ -75,7 +75,7 @@ function loadTeamRank(data) {
 
 function loadTopRanks() {
     
-    $.ajax({
+    /*$.ajax({
         type: "GET",
         url: tbaUrl("/event/"+getSetting("eventkey")+"/rankings"),
         dataType: "json",
@@ -94,7 +94,7 @@ function loadTopRanks() {
                     row.insertCell(-1).innerHTML = rankData[i].extra_stats[0];
                     row.insertCell(-1).innerHTML = (tRP / tMP).toFixed(2).toString();
                 }
-            }
+            }*/
             /*
             if (data != null) {
                 for (var i=0; i<68; i++) {
@@ -112,8 +112,8 @@ function loadTopRanks() {
                 }
             }
             */
-        }
-    });
+        //}
+    //});
 }
 
 function loadLastMatch(data) {
