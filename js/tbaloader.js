@@ -75,17 +75,17 @@ function loadTeamRank(data) {
 
 function loadTopRanks() {
     
-    /*$.ajax({
+    $.ajax({
         type: "GET",
         url: tbaUrl("/event/"+getSetting("eventkey")+"/rankings"),
         dataType: "json",
         success: function(data) {
-            var table = document.getElementById("table");
             var rankData = data.rankings;
-            table.tBodies.innerHTML = "";
+            var body = document.getElementById("rk_data");
+            body.innerHTML = "";
             if (data != null) {
                 for (var i = 0; i < rankData.length; i++) {
-                    var row = table.insertRow(-1);
+                    var row = body.insertRow(-1);
                     row.insertCell(-1).innerHTML = (i+1).toString();
                     row.insertCell(-1).innerHTML = rankData[i].team_key.toString().replace("frc", "");
                     var tMP = rankData[i].matches_played;
@@ -93,27 +93,16 @@ function loadTopRanks() {
                     row.insertCell(-1).innerHTML = rankData[i].matches_played.toString();
                     row.insertCell(-1).innerHTML = rankData[i].extra_stats[0];
                     row.insertCell(-1).innerHTML = (tRP / tMP).toFixed(2).toString();
-                }
-            }*/
-            /*
-            if (data != null) {
-                for (var i=0; i<68; i++) {
-                    document.getElementById("rankTeam"+(i+1).toString()).innerHTML = rankData[i].team_key.toString().replace("frc", "");
-                    var tMP = rankData[i].matches_played;
-                    document.getElementById("played"+(i+1).toString()).innerHTML = tMP.toString();
-                    var tRP = rankData[i].extra_stats[0];
-                    document.getElementById("totalRP"+(i+1).toString()).innerHTML = tRP;
-                    document.getElementById("meanRP"+(i+1).toString()).innerHTML = (tRP / tMP).toFixed(2).toString();
                     if (rankData[i].team_key.toString().replace("frc", "") == getSetting("teamkey").toString().replace("frc", "")) {
-                        document.getElementById("rowTeam"+(i+1).toString()).style = "background-color: lightgreen;";
-                    } else {
-                        document.getElementById("rowTeam"+(i+1).toString()).style = "";
+                        row.style = "background-color: lightgreen;"
+                    }
+                    else {
+                        row.style = "";
                     }
                 }
             }
-            */
-        //}
-    //});
+        }
+    });
 }
 
 function loadLastMatch(data) {
