@@ -3,11 +3,11 @@ document.addEventListener('keydown', function(event) {
     var page = path.split("/").pop();
     if (event.keyCode == 37 || event.keyCode == 188) { // 37 is the Key Code for The left Key || 188 is the Key Code for <
       
-       if (page === "index.html"){
+       if (page === "dashboard.html"){
         window.location.replace("credits.html");
        }
        else if (page === "lookahead.html"){
-        window.location.replace("index.html");
+        window.location.replace("dashboard.html");
        }
        else if (page === "settings.html"){
         window.location.replace("lookahead.html");
@@ -20,7 +20,7 @@ document.addEventListener('keydown', function(event) {
         window.location.replace("credits.html");
     }  
     else if (event.keyCode == 68){ // 68 is the Key Code for D
-        window.location.replace("index.html");
+        window.location.replace("dashboard.html");
     }
     else if (event.keyCode == 76){ // 76 is the Key Code for L
         window.location.replace("lookahead.html");
@@ -29,7 +29,7 @@ document.addEventListener('keydown', function(event) {
         window.location.replace("settings.html");
     } 
     else if (event.keyCode == 49){ // 49 is the Key Code for 1
-        window.location.replace("index.html");
+        window.location.replace("dashboard.html");
     }
     else if (event.keyCode == 50){ // 50 is the Key Code for 2
         window.location.replace("lookahead.html");
@@ -45,7 +45,7 @@ document.addEventListener('keydown', function(event) {
     //}
     else if (event.keyCode == 39 || event.keyCode == 190) { // 39 is the Key Code for The right Key || 190 is the Key Code for >
     
-        if (page === "index.html"){
+        if (page === "dashboard.html"){
             window.location.replace("lookahead.html");
            }
            else if (page === "lookahead.html"){
@@ -55,7 +55,7 @@ document.addEventListener('keydown', function(event) {
             window.location.replace("credits.html");
            }
            else if (page === "credits.html"){
-            window.location.replace("index.html");
+            window.location.replace("dashboard.html");
            }
     
 
