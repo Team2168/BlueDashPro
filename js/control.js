@@ -4,7 +4,7 @@ document.addEventListener('keydown', function(event) {
     if (event.keyCode == 37 || event.keyCode == 188) { // 37 is the Key Code for The left Key || 188 is the Key Code for <
       
        if (page === "index.html"){
-        window.location.replace("settings.html");
+        window.location.replace("credits.html");
        }
        else if (page === "lookahead.html"){
         window.location.replace("index.html");
@@ -12,7 +12,13 @@ document.addEventListener('keydown', function(event) {
        else if (page === "settings.html"){
         window.location.replace("lookahead.html");
        }
+       else if (page === "credits.html"){
+        window.location.replace("settings.html");
+       }
     }
+    else if (event.keyCode == 67){ // 67 is the Key Code for c
+        window.location.replace("credits.html");
+    }  
     else if (event.keyCode == 68){ // 68 is the Key Code for D
         window.location.replace("index.html");
     }
@@ -21,7 +27,7 @@ document.addEventListener('keydown', function(event) {
     }
     else if (event.keyCode == 83){ // 83 is the Key Code for S
         window.location.replace("settings.html");
-    }   
+    } 
     else if (event.keyCode == 49){ // 49 is the Key Code for 1
         window.location.replace("index.html");
     }
@@ -31,6 +37,9 @@ document.addEventListener('keydown', function(event) {
     else if (event.keyCode == 51){ // 51 is the Key Code for 3
         window.location.replace("settings.html");
     } 
+    else if (event.keyCode == 52){ // 52 is the Key Code for 4
+        window.location.replace("credits.html");
+    }
     //else if (event.keyCode == 38) { // 38 is the Key Code for The up Key 
        
     //}
@@ -43,6 +52,9 @@ document.addEventListener('keydown', function(event) {
             window.location.replace("settings.html");
            }
            else if (page === "settings.html"){
+            window.location.replace("credits.html");
+           }
+           else if (page === "credits.html"){
             window.location.replace("index.html");
            }
     
