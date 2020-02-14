@@ -1,3 +1,9 @@
-.hidden {
-    display: none;
-}
+
+
+#foot {
+    background: lightgray;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }

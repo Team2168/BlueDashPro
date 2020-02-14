@@ -1,7 +1,7 @@
 document.addEventListener('keydown', function(event) {
     var path = window.location.pathname;
     var page = path.split("/").pop();
-    if (event.keyCode == 37 || event.keyCode == 188) { // 37 is the Key Code for The left Key || 188 is the Key Code for <
+    if (event.keyCode == 37 || event.keyCode == 188 || event.keyCode == 219) { // 37 is the Key Code for The left Key || 188 is the Key Code for < || 188 is the Key Code for {
       
        if (page === "dashboard.html"){
         window.location.replace("credits.html");
@@ -43,7 +43,7 @@ document.addEventListener('keydown', function(event) {
     //else if (event.keyCode == 38) { // 38 is the Key Code for The up Key 
        
     //}
-    else if (event.keyCode == 39 || event.keyCode == 190) { // 39 is the Key Code for The right Key || 190 is the Key Code for >
+    else if (event.keyCode == 39 || event.keyCode == 190 || event.keyCode == 221) { // 39 is the Key Code for The right Key || 190 is the Key Code for > || 221 is the Key Code for }
     
         if (page === "dashboard.html"){
             window.location.replace("lookahead.html");
