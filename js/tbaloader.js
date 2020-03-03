@@ -182,6 +182,7 @@ function loadNextMatch(data) {
                 
                 document.getElementById("nextMatchNumber").innerHTML = data.match_number.toString();
             }
+        
         })
     }
 }
