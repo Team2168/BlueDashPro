@@ -73,6 +73,18 @@ function loadTeamRank(data) {
     }
 }
 
+function loadLookahead() {
+    $.ajax({
+        type: "GET",
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1aqKbIZXAx_HimcNqdp4XRxbU62frx-fB8NweF7tSYJU",
+        dataType: "json",
+        success: function(data) {
+            console.log(data);
+        }
+
+    })
+}
+
 function loadTopRanks() {
     
     $.ajax({
