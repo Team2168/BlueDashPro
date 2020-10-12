@@ -1,6 +1,6 @@
 var defaults = [];
-defaults["teamkey"] = "frc5980";
-defaults["eventkey"] = "2019miwmi";
+defaults["teamkey"] = "frc2168";
+defaults["eventkey"] = "2020mabri";
 defaults["streamurl"] = "[auto]";
 defaults["showsponsers"] = 1;
 defaults["sponserpics"] = [

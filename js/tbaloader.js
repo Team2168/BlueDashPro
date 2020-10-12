@@ -73,25 +73,43 @@ function loadTeamRank(data) {
     }
 }
 
+function loadLookahead() {
+    $.ajax({
+        type: "GET",
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1aqKbIZXAx_HimcNqdp4XRxbU62frx-fB8NweF7tSYJU",
+        dataType: "json",
+        success: function(data) {
+            console.log(data);
+        }
+
+    })
+}
+
 function loadTopRanks() {
+    
     $.ajax({
         type: "GET",
         url: tbaUrl("/event/"+getSetting("eventkey")+"/rankings"),
         dataType: "json",
         success: function(data) {
             var rankData = data.rankings;
+            var body = document.getElementById("rk_data");
+            body.innerHTML = "";
             if (data != null) {
-                for (var i=0; i<68; i++) {
-                    document.getElementById("rankTeam"+(i+1).toString()).innerHTML = rankData[i].team_key.toString().replace("frc", "");
+                for (var i = 0; i < rankData.length; i++) {
+                    var row = body.insertRow(-1);
+                    row.insertCell(-1).innerHTML = (i+1).toString();
+                    row.insertCell(-1).innerHTML = rankData[i].team_key.toString().replace("frc", "");
                     var tMP = rankData[i].matches_played;
-                    document.getElementById("played"+(i+1).toString()).innerHTML = tMP.toString();
                     var tRP = rankData[i].extra_stats[0];
-                    document.getElementById("totalRP"+(i+1).toString()).innerHTML = tRP;
-                    document.getElementById("meanRP"+(i+1).toString()).innerHTML = (tRP / tMP).toFixed(2).toString();
+                    row.insertCell(-1).innerHTML = rankData[i].matches_played.toString();
+                    row.insertCell(-1).innerHTML = rankData[i].extra_stats[0];
+                    row.insertCell(-1).innerHTML = (tRP / tMP).toFixed(2).toString();
                     if (rankData[i].team_key.toString().replace("frc", "") == getSetting("teamkey").toString().replace("frc", "")) {
-                        document.getElementById("rowTeam"+(i+1).toString()).style = "background-color: lightgreen;";
-                    } else {
-                        document.getElementById("rowTeam"+(i+1).toString()).style = "";
+                        row.style = "background-color: lightgreen;"
+                    }
+                    else {
+                        row.style = "";
                     }
                 }
             }
@@ -176,6 +194,7 @@ function loadNextMatch(data) {
                 
                 document.getElementById("nextMatchNumber").innerHTML = data.match_number.toString();
             }
+        
         })
     }
 }
